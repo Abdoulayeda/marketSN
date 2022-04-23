@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "aliou",
-    "password": "diaoaliou",
+    "username": "",
+    "password": "",
     "database": "db_market",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "aliou",
-    "password": "diaoaliou",
+    "username": "",
+    "password": "",
     "database": "db_market",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "aliou",
-    "password": "diaoaliou",
+    "username": "",
+    "password": "",
     "database": "db_market",
     "host": "127.0.0.1",
     "dialect": "mysql"
