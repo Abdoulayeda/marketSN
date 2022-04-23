@@ -1,0 +1,33 @@
+<%- include('../master/header') -%> 
+
+<div class="container">
+<h1 class="alert alert-warning">Cette page est réserver a l'administrateur.</h1>
+    <h2>Bienvenue <%= decodedToken.email  %> </h2>
+      <div class="col-lg-3">
+         <a href="/api/createcategorie" class="btn btn-primary">Ajouter un categorie</a>
+      </div>
+      <h3>Liste des vendeurs</h3>
+      <p> Il y a <%=users.length%> vendeurs </p>
+     <table class="table table-striped">
+        <thead>
+           <th>Email</th>
+           <th>Téléphone</th>
+           <th>Role</th>
+           <th>Action</th>    
+        </thead> 
+        <tbody>
+          <tr>
+            <% for(user of users) {%>
+              <td><%=user.email %> </td>
+              <td><%=user.telephone %> </td>
+              <td><%=user.role %></td>
+              <td><a href="/vendeur/<%= user.id  %>" class="btn btn-warning">Produits</a></td>
+              <td><a href="/api/delete/<%=user.id  %> " class="btn btn-danger">Supprimer</a></td>
+              <td></td>
+          </tr>
+          <% } %> 
+         </tbody>
+     </table>
+   </div> 
+       
+<%- include('../master/footer') -%> 

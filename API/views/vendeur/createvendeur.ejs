@@ -1,0 +1,20 @@
+<%- include('../master/header') -%> 
+<div class="container">
+  <h2>Formulaire pour ajouter un vendeur</h2>
+  
+<form action="/api/register" method="post" class="form-group col-lg-6">
+  <label for="">Email</label>
+  <input type="email" class="form-control" name="email" placeholder="">
+  <label for="">Téléphone</label>
+  <input type="text" class="form-control" name="telephone" placeholder="">
+  <label for="">Mot de passe</label>
+  <input type="password" class="form-control" name="password" placeholder="">
+  <label for="">Confirmation votre mot de passe</label>
+  <input type="password" class="form-control" name="confPassword" placeholder="">
+  <button class="btn btn-primary mt-2 mb-4">Ajouter</button>
+</form>
+<h4>Une fois inscrit merci de contacter l'administrateur sur le mail 
+  <a href="https://www.google.com/intl/fr/gmail/about/"><mark>admin@gmail.com</mark></a> ou par Téléphone au <mark>782777140</mark> pour valider votre inscription</h4>
+</div>
+
+<%- include('../master/footer') -%> 

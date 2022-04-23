@@ -1,0 +1,42 @@
+<%- include('../master/header') -%> 
+  <div class="container">
+    <h1>Cette page est réservé aux vendeur.</h1>
+    <h3>Bienvenue <%=decodedToken.role  %></h3>
+    <h4>Email: <%=decodedToken.email %></h4>
+    
+<div class="row">
+  <div class="col-lg-2">    
+    <a href="/api/produitcreate" class="btn btn-primary">Ajouter un produit</a>
+  </div>
+  <div class="col-lg-2">
+    <a href="#" class="btn btn-primary">Voir les commandes</a>
+  </div>
+</div>     
+    <h3>Liste des produits</h3>
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Quantite</th>
+          <th>Image</th>
+          <th>Actif</th>
+          <th>Action</th>
+        </thead>
+        <tbody class="table-bordered">
+          <% for(produit of user.produits){%> 
+          <tr>
+            <td><%=produit.nom  %> </td>
+            <td><%=produit.prix  %> FCFA</td>
+            <td><%=produit.quantite  %></td>
+            <td><img src="../images/<%=produit.image%>" width="100"; height="100" alt=""></td>
+            <td><%=produit.actif %></td>
+            <td><button class="btn btn-warning">Modifier</button></td>
+            <td><button class="btn btn-danger">Supprimer</button></td>
+          </tr>
+          <% } %> 
+        </tbody>
+      </table>
+    </div> 
+  </div>
+<%- include('../master/footer') -%> 

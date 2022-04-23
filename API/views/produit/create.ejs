@@ -1,0 +1,34 @@
+<%- include('../master/header') -%> 
+
+<div class="container">
+    <h1>Ajouter un produit</h1>
+    <h2>Bienvenue <%= decodedToken.email  %> </h2>
+   <div >
+    <div class="form-group col-lg-6 center">
+      <form action="/api/produitcreate" method="post" class="form-group" enctype="multipart/form-data">
+          <label>Nom</label>
+          <input class="form-control" type="text" name="nom" placeholder="">
+          <label>Description</label>
+          <input class="form-control" type="text" name="description" placeholder="">
+          <label >Prix</label>
+          <input class="form-control" type="text" name="prix" placeholder="">
+          <label>quantite</label>
+          <input class="form-control" type="text" name="quantite" placeholder="">
+          <label>Image</label>
+          <input class="form-control" type="file" name="image" placeholder="">
+          <label>Categorie</label>
+           <select name="CategorieId" class="form-control">
+               <% for(categorie of categories) {%> 
+               <option value="<%=categorie.id%>"><%=categorie.nom%> </option>
+               <% } %> 
+           </select><br>     
+          <input class="form-control" type="hidden" name="UserId" value="<%= decodedToken.userId  %> " placeholder="">
+         <button class="btn btn-primary mt-3 mb-5">Ajouter</button>
+      </form>
+    </div>
+   </div>
+</div>
+
+
+
+<%- include('../master/footer') -%>

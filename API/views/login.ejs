@@ -1,0 +1,16 @@
+<%- include('./master/header') -%> 
+   <div class="container text-center">
+       <h1>Bienvenue sur le  site shopsn. Connectez vous pour continuer.</h1>
+       <h2>Connexion</h2>
+    <div class="form-group col-lg-6 mb-6 container">
+     <form action="/api/login" method="post">
+         <label for="">Email</label>
+         <input type="email" class="form-control mt-2" placeholder="entrez votre email"name="email">
+         <label for="">Mot de passe</label>
+         <input type="password" class="form-control mt-2" placeholder="entrez votre password" name="password">
+ 
+         <button class="btn btn-primary mt-2 mb-2">Connecter</button>
+     </form>
+    </div>
+   </div>
+<%- include('./master/footer') -%> 
